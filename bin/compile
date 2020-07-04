@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+set -e
+
+BUILD_DIR=${1:-}
+ENV_DIR=${3:-}
+
+GITHUB_COMPANY=$(cat $ENV_DIR/GITHUB_COMPANY)
+GITHUB_NPM_AUTH_TOKEN=$(cat $ENV_DIR/GITHUB_NPM_AUTH_TOKEN)
+
+create_npmrc() {
+		dir="$1"
+		github_company="$2"
+		github_auth_token="$3"
+		# config
+		echo "$github_company:registry=https://npm.pkg.github.com/" > $dir/.npmrc
+		echo -e "//npm.pkg.github.com/:_authToken=$github_auth_token" >> $dir/.npmrc
+		cat $dir/.npmrc
+		echo "Added .npmrc"
+}
+
+create_npmrc $BUILD_DIR $GITHUB_COMPANY $GITHUB_NPM_AUTH_TOKEN
