@@ -11,5 +11,5 @@ heroku config:add GITHUB_NPM_AUTH_TOKEN my_auth_token
 ```
 
 Where:
-- `@my_company_name` the name of the owner of the GitHub repository preceded by an `@`, e.g. @orderstatistics.
+- `@my_company_name` is the name of the owner of the GitHub repository preceded by an `@`, e.g. @orderstatistics.
 - `my_auth_token` is a personal access token with (at a minimum) `read:package` rights. To create a token head over to GitHub: https://github.com/settings/tokens.
