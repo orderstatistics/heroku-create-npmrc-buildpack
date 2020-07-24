@@ -14,7 +14,6 @@ create_npmrc() {
 		# config
 		echo "$github_company:registry=https://npm.pkg.github.com/" > $dir/.npmrc
 		echo -e "//npm.pkg.github.com/:_authToken=$github_auth_token" >> $dir/.npmrc
-		cat $dir/.npmrc
 		echo "Added .npmrc"
 }
 
