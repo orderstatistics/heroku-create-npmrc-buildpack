@@ -1,5 +1,5 @@
 # heroku-create-npmrc-buildpack
-This buildpack allows you to install private packages in GitHub's Package Repository (GPR) by logging in to GPR using a `.npmrc` file. This buidpack creates a new .npmrc file in the root directory of your application, an existing `.nprmc` rile will be overwritten.
+This buildpack allows you to install private packages in GitHub's Package Repository (GPR). This buildpack authenticates with GPR using a `.npmrc` file. This buidpack creates a new .npmrc file in the root directory of your application, an existing `.nprmc` rile will be overwritten.
 
 This buildpack should be **run before the buildpack `heroku/nodejs`**.
 
